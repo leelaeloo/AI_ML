@@ -1,28 +1,25 @@
-# 집합 예제 (두 반 학생들의 취미 분석)
 
-# 두 반 학생들의 취미 분석
-class_a_hobbies = {"축구", "농구", "게임", "노래", "달리기"}
-class_b_hobbies = {"야구", "농구", "게임", "볼링", "음악", "배드민턴"}
+# 집합 예제 (두 태수들의 취미 분석)
 
-# 양쪽 반에 모두 있는 취미 -> 교집합
-common_hobbies = class_a_hobbies & class_b_hobbies
-print(f"공통 취미 : {common_hobbies}")                  # {'게임', '농구'}
+# 두 태수들의 취미
+leetaesoo_hobbies = {"축구", "농구", "게임", "노래", "애니 시청", "얼음 샤워"}
+samtaesoo_hobbies = {"축구", "농구", "게임", "노래", "메뚜기의 종류 100가지 외우기"}
 
-# A반에만 있는 취미 -> 차집합
-only_a_hobbies = class_a_hobbies - class_b_hobbies
-print(f"A반 전용 취미 : {only_a_hobbies}")             # A반 전용 취미 : {'축구', '노래', '달리기'}
+common_hobbies = leetaesoo_hobbies & samtaesoo_hobbies
+print(f"\n두 태수의 공통 취미 : {common_hobbies}\n")                
 
-# B반에만 있는 취미 -> 차집합
-only_b_hobbies = class_b_hobbies - class_a_hobbies
-print(f"B반 전용 취미 : {class_b_hobbies}")            # B반 전용 취미 : {'볼링', '게임', '야구', '배드민턴', '농구', '음악'}
+only_leetaesoo = leetaesoo_hobbies - samtaesoo_hobbies
+print(f"\n이태수만 가진 취미 : {only_leetaesoo}\n")             
 
-# 모든 취미 목록 -> 합집합
-all_hobbies = class_a_hobbies | class_b_hobbies
-print(f"모든 취미 목록 : {all_hobbies}")               # 모든 취미 목록 : {'축구', '배드민턴', '노래', '볼링', '게임', '야구', '달리기', '농구', '음악'}
+only_samtaesoo = samtaesoo_hobbies - leetaesoo_hobbies
+print(f"\n삼태수만 가진 취미 : {only_samtaesoo}\n")           
 
-# 고유한 취미 -> 대칭 차집합
-unique_hobbies = class_a_hobbies ^ class_b_hobbies
-print(f"한쪽 반에만 있는취미 : {unique_hobbies}")     # 한쪽 반에만 있는취미 : {'축구', '배드민턴', '노래', '볼링', '야구', '달리기', '음악'}
+all_hobbies = leetaesoo_hobbies | samtaesoo_hobbies
+print(f"\n모든 취미 목록 : {all_hobbies}\n")               
 
-# 취미의 종류 수
-print(f"전체 취미 종류 수 : {len(all_hobbies)}종류")      # 전체 취미 종류 수 : 9종류
+unique_hobbies = leetaesoo_hobbies ^ samtaesoo_hobbies
+print(f"\n독특한 취미 : {unique_hobbies}\n")    
+
+print(f"\n전체 취미 종류 수 : {len(all_hobbies)}종류\n")
+
+

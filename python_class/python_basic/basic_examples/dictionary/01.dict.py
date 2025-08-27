@@ -14,5 +14,5 @@ list_data = [(f"key_{i}", i) for i in range(data_size)]
 start_time = time.time()
 result_dict = dict_data[search_key]
 dict_time = time.time() - start_time
-print(f"딕셔너리 검색 시간: {dict_time:.6f}초")     # 딕셔너리 검색 시간 : 0.000014초
-print(f"찾은 값: {result_dict}")                    # 찾은 값 : 999999
+print(f"\n딕셔너리 검색 시간: {dict_time:.6f}초\n")     # 딕셔너리 검색 시간 : 0.000014초
+print(f"\n찾은 값: {result_dict}\n")                    # 찾은 값 : 999999

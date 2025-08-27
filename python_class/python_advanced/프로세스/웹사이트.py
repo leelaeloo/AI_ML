@@ -1,7 +1,3 @@
-# 수업 전용
-
-# --- 08.27 --- #
-
 import asyncio
 import aiohttp
 import time
