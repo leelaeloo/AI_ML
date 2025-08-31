@@ -11,7 +11,8 @@ websites = [
     "https://www.python.org",
     "https://www.microsoft.com",
     "https://www.amazon.com",
-    "https://www.reddit.com",
+    "https://www.reddit.com"
+
 ]
 
 
